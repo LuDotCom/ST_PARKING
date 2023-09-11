@@ -22,7 +22,10 @@ Il progetto "ST PARKING" è un sistema innovativo di gestione del parcheggio urb
 
 # Utilizzo
 __L'intera demo viene eseguita su un microcontrollore della ST Microelectronics STM32-Nucleo64-G474RE utilizzando il sistema operativo ChibiOS/RT e la toolchain ChibiStudio.__
-Questo repository contiene il codice sorgente e la documentazione associata al progetto. Per maggiori informazioni, consultare il file readme.txt presente all'interno della cartella del sorgente. 
+Questo repository contiene il codice sorgente commentato riga per riga per garantire una maggiore leggibilità. Per maggiori informazioni, consultare il file readme.txt presente all'interno della cartella del sorgente. 
 
 *N.B. Per l'utilizzo delle immagini sullo schermo Oled è possibile utilizzare uno script Matlab per la conversione.*
+
+# Collegamenti
+All'interno del repository è presente il file (./collegamenti.pdf) che permette di replicare i collegamenti utilizzati per il funzionamento del ST PARKING. Visto che il numero di Led per l'illuminazione del parcheggio può essere facoltativa è stata omessa la descrizione del suo collegamento. In ogni caso nel file ./ST_PARKING/myLib.h è possibile trovare la definizione dei PIN a cui vanno collegati i vari sensori.
 
