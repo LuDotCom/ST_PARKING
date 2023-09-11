@@ -1,5 +1,5 @@
 /*
- * Copyrights: Luca Comentale
+ * Copyright: Luca Comentale
  *             Salvatore Cangiano
  *             Giovanni D'Ambrosio
  */
