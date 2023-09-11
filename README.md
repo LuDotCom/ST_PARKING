@@ -19,3 +19,7 @@ Il progetto "ST PARKING" è un sistema innovativo di gestione del parcheggio urb
 - Regolazione automatica dell'illuminazione del parcheggio in base alle condizioni di luce naturale attraverso un sensore di luce ambientale [TEMT6000].
 - Aumento dell'intensità luminosa dei Led quando un veicolo si avvicina in ingresso al parcheggio, migliorando la visibilità e la sicurezza.
 - Contributo diretto alla sostenibilità ambientale riducendo le emissioni di CO2 e il consumo energetico.
+
+# Utilizzo
+Questo repository contiene il codice sorgente e la documentazione associata al progetto.
+
