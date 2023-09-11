@@ -27,5 +27,5 @@ Questo repository contiene il codice sorgente commentato riga per riga per garan
 *N.B. Per l'utilizzo delle immagini sullo schermo Oled è possibile utilizzare uno script Matlab per la conversione.*
 
 # Collegamenti
-All'interno del repository è presente il file (./collegamenti.pdf) che permette di replicare i collegamenti utilizzati per il funzionamento del ST PARKING. Visto che il numero di Led per l'illuminazione del parcheggio può essere facoltativa è stata omessa la descrizione del suo collegamento. In ogni caso nel file ./ST_PARKING/myLib.h è possibile trovare la definizione dei PIN a cui vanno collegati i vari sensori.
+All'interno del repository è presente il file [Collegamenti.pdf](./collegamenti.pdf) che permette di replicare i collegamenti utilizzati per il funzionamento del ST PARKING. Visto che il numero di Led per l'illuminazione del parcheggio può essere facoltativa è stata omessa la descrizione del suo collegamento. In ogni caso nel file [myLib.h](./ST_PARKING/myLib.h) è possibile trovare la definizione dei PIN a cui vanno collegati i vari sensori.
 
