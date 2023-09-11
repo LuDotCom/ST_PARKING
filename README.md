@@ -1,13 +1,13 @@
 # ST PARKING
 ST PARKING è uno dei tre progetti vincitori del Neapolis Innovation Summer Campus 2023 ideato, progettato e sviluppato da un Team composto da:
-- Luca Comentale          Università Degli Studi di Napoli Federico II
-- Nicolas Percuoco        Università Degli Studi di Napoli Federico II
-- Giovanni D'Ambrosio     Università Degli Studi Luigi Vanvitelli
-- Salvatore Cangiano      Università Degli Studi di Napoli Federico II
-- Fabrizio Mazzeo         Università Degli Studi di Napoli Federico II
-- Giuseppe Amore          Università Degli Studi di Napoli Federico II
-- Luigi Cocozza           Università Degli Studi di Napoli Federico II
-- Francesco Camillo       Università Degli Studi di Napoli Federico II
+- Luca Comentale - Università Degli Studi di Napoli Federico II
+- Nicolas Percuoco - Università Degli Studi di Napoli Federico II
+- Giovanni D'Ambrosio - Università Degli Studi Luigi Vanvitelli
+- Salvatore Cangiano - Università Degli Studi di Napoli Federico II
+- Fabrizio Mazzeo - Università Degli Studi di Napoli Federico II
+- Giuseppe Amore - Università Degli Studi di Napoli Federico II
+- Luigi Cocozza - Università Degli Studi di Napoli Federico II
+- Francesco Camillo - Università Degli Studi di Napoli Federico II
 
 
 
