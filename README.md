@@ -22,4 +22,5 @@ Il progetto "ST PARKING" è un sistema innovativo di gestione del parcheggio urb
 
 # Utilizzo
 Questo repository contiene il codice sorgente e la documentazione associata al progetto.
+*N.B. Per l'utilizzo delle immagini sullo schermo Oled è possibile utilizzare uno script Matlab per la conversione*
 
