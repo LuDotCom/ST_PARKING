@@ -9,7 +9,7 @@ ST PARKING è uno dei tre progetti vincitori del Neapolis Innovation Summer Camp
 - Luigi Cocozza
 - Francesco Camillo
 
-**L'intera demo viene eseguita su una board STM32-Nucleo64-G474RE.**
+__L'intera demo viene eseguita su una board STM32-Nucleo64-G474RE.__
 
 
 # Descrizione
