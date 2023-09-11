@@ -21,8 +21,8 @@ Il progetto "ST PARKING" è un sistema innovativo di gestione del parcheggio urb
 - Contributo diretto alla sostenibilità ambientale riducendo le emissioni di CO2 e il consumo energetico.
 
 # Utilizzo
-__L'intera demo viene eseguita su un microcontrollore della ST Microelectronics STM32-Nucleo64-G474RE utilizzando il sistema operativo ChibiOS/RT e la toolchain ChibiStudio.__
-Questo repository contiene il codice sorgente commentato riga per riga per garantire una maggiore leggibilità. Per maggiori informazioni, consultare il file readme.txt presente all'interno della cartella del sorgente. 
+__L'intera demo viene eseguita su un microcontrollore della ST Microelectronics STM32-Nucleo64-G474RE utilizzando il sistema operativo ChibiOS/RT e il cui codice sorgente è stato scritto utilizzando la toolchain ChibiStudio associata.__
+Questo repository contiene il codice sorgente commentato riga per riga per garantire una maggiore leggibilità. Per maggiori informazioni, consultare il file readme.txt presente all'interno della cartella del sorgente e il sito di [ChibiOS](www.chibios.org). 
 
 *N.B. Per l'utilizzo delle immagini sullo schermo Oled è possibile utilizzare uno script Matlab per la conversione.*
 
