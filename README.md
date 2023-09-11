@@ -9,7 +9,6 @@ ST PARKING è uno dei tre progetti vincitori del Neapolis Innovation Summer Camp
 - Luigi Cocozza
 - Francesco Camillo
 
-__L'intera demo viene eseguita su una board STM32-Nucleo64-G474RE.__
 
 
 # Descrizione
@@ -22,7 +21,7 @@ Il progetto "ST PARKING" è un sistema innovativo di gestione del parcheggio urb
 - Contributo diretto alla sostenibilità ambientale riducendo le emissioni di CO2 e il consumo energetico.
 
 # Utilizzo
-Questo repository contiene il codice sorgente e la documentazione associata al progetto.
+Questo repository contiene il codice sorgente e la documentazione associata al progetto. __L'intera demo viene eseguita su una board STM32-Nucleo64-G474RE.__
 
 *N.B. Per l'utilizzo delle immagini sullo schermo Oled è possibile utilizzare uno script Matlab per la conversione.*
 
