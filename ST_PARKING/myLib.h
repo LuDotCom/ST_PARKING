@@ -19,9 +19,9 @@ static adcsample_t samples[ADC_GRP_NUM_CHANNELS*ADC_GRP_BUF_DEPTH];
 
 #define LEDS_LINE                   PAL_LINE(GPIOB,4)     //D5 -> PWM
 #define IR_ENTRY_LINE               PAL_LINE(GPIOA,10)    //D2 -> OUT
-#define IR_EXIT_LINE                PAL_LINE(GPIOB,5)     //D4
-#define SERVO_ENTRY_LINE            PAL_LINE(GPIOB,6)     //D10
-#define SERVO_EXIT_LINE             PAL_LINE(GPIOB,7)     //PIN 21 SX IN LINEA A GND
+#define IR_EXIT_LINE                PAL_LINE(GPIOB,5)     //D4 -> OUT
+#define SERVO_ENTRY_LINE            PAL_LINE(GPIOB,6)     //D10 -> PWM
+#define SERVO_EXIT_LINE             PAL_LINE(GPIOB,7)     //21esimo STMorpho sx
 #define SERVO_ZERO_DEGREES          750
 #define SERVO_NINETY_DEGREES        1250
 
