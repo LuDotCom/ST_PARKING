@@ -1,7 +1,7 @@
 /*
- * Copyrights: Luca Comentale
- *             Salvatore Cangiano
- *             Giovanni D'Ambrosio
+ * Author: Luca Comentale 
+ *         Salvatore Cangiano
+ *         Giovanni D'Ambrosio
  */
 
 #include "myLib.h"
