@@ -39,9 +39,9 @@ static adcsample_t samples[ADC_GRP_NUM_CHANNELS*ADC_GRP_BUF_DEPTH];
  * Const Values
  */
 int posti=6;
-static const int pw_value_zero = 0;
-static const int pwm_value_min= (int) ((30/100.0)*10000);
-static const int pwm_value_max= (int) ((100/100.0)*10000);
+static const int pw_value_zero = 0;                        //Leds Off
+static const int pwm_value_min= (int) ((30/100.0)*10000); //Leds at 30%
+static const int pwm_value_max= (int) ((100/100.0)*10000); //Leds at 100%
 char buffer[BUF_SIZE];
 static SSD1306Driver SSD1306D1;
 
@@ -134,7 +134,3 @@ static const I2CConfig i2ccfg = {
 // I2C_TIMINGR address offset
     .timingr = 0x10, .cr1 = 0, .cr2 = 1, };
 static const SSD1306Config ssd1306cfg = {&I2CD1, &i2ccfg, SSD1306_SAD_0X78, };
-
-
-
-
