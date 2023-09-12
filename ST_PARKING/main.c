@@ -1,5 +1,5 @@
 /*
- * Author: Luca Comentale
+ * Copyrights: Luca Comentale
  *             Salvatore Cangiano
  *             Giovanni D'Ambrosio
  */
@@ -27,8 +27,8 @@ static THD_FUNCTION(ThreadExit,arg){
   set_PWMSERVOEXIT();
   set_IREXIT();
 
-  pwmEnableChannel(&PWMD4, 1, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
-  pwmEnableChannel(&PWMD3, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pw_value_zero));
+  pwmEnableChannel(&PWMD4, PWM_ONE_CHANNEL , PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
+  pwmEnableChannel(&PWMD3, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pw_value_zero));
 
   while(true){
 
@@ -48,7 +48,7 @@ static THD_FUNCTION(ThreadExit,arg){
          continue;
       }
 
-      pwmEnableChannel(&PWMD3, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_min));
+      pwmEnableChannel(&PWMD3, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_min));
 
       if(palReadLine(IR_EXIT_LINE) == PAL_LOW && posti<6){
 
@@ -56,7 +56,7 @@ static THD_FUNCTION(ThreadExit,arg){
          * If the exit sensor detects the car and the parking space is not empty then
          * open the exit barrier
          */
-        pwmEnableChannel(&PWMD4,1,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_NINETY_DEGREES));
+        pwmEnableChannel(&PWMD4, PWM_ONE_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_NINETY_DEGREES));
 
 
         /*
@@ -73,8 +73,8 @@ static THD_FUNCTION(ThreadExit,arg){
          */
         posti++;
         chThdSleepMilliseconds(2000);
-        pwmEnableChannel(&PWMD3, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_min));
-        pwmEnableChannel(&PWMD4, 1,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
+        pwmEnableChannel(&PWMD3, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_min));
+        pwmEnableChannel(&PWMD4, PWM_ONE_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
       }//End if PalReadLine && posti<6
     }//End If Samples
 
@@ -89,7 +89,7 @@ static THD_FUNCTION(ThreadExit,arg){
        */
       if(palReadLine(IR_EXIT_LINE) == PAL_LOW && posti<6){
 
-        pwmEnableChannel(&PWMD4,1,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_NINETY_DEGREES));
+        pwmEnableChannel(&PWMD4, PWM_ONE_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_NINETY_DEGREES));
 
         while(palReadLine(IR_EXIT_LINE)==PAL_LOW){
                   chThdSleepMilliseconds(200);
@@ -97,7 +97,7 @@ static THD_FUNCTION(ThreadExit,arg){
 
         posti++;
         chThdSleepMilliseconds(2000);
-        pwmEnableChannel(&PWMD4, 1,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
+        pwmEnableChannel(&PWMD4, PWM_ONE_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
 
       }//End if PalReadLine && posti<6
     }//End Else
@@ -129,8 +129,8 @@ static THD_FUNCTION(ThreadEntry,arg){
   /*
    * Initial setting of the entry barrier and Leds
    */
-  pwmEnableChannel(&PWMD4, 0, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
-  pwmEnableChannel(&PWMD3, 0, PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pw_value_zero));
+  pwmEnableChannel(&PWMD4, PWM_ZERO_CHANNEL , PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
+  pwmEnableChannel(&PWMD3, PWM_ZERO_CHANNEL , PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pw_value_zero));
 
 
   while(true){
@@ -148,7 +148,7 @@ static THD_FUNCTION(ThreadEntry,arg){
       /*
        * Energy-saving parking lights are switched on at night
        */
-      pwmEnableChannel(&PWMD3, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_min));
+      pwmEnableChannel(&PWMD3, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_min));
 
 
       /*
@@ -159,8 +159,8 @@ static THD_FUNCTION(ThreadEntry,arg){
       if(palReadLine(IR_ENTRY_LINE)==PAL_LOW && posti>0){
 
         power_max = 1;
-        pwmEnableChannel(&PWMD3, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_max));
-        pwmEnableChannel(&PWMD4,0,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_NINETY_DEGREES));
+        pwmEnableChannel(&PWMD3, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_max));
+        pwmEnableChannel(&PWMD4, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_NINETY_DEGREES));
 
         /*
          * The barrier remains open as long as the sensor detects a car
@@ -175,10 +175,10 @@ static THD_FUNCTION(ThreadEntry,arg){
          */
         posti--;
         chThdSleepMilliseconds(2000);
-        pwmEnableChannel(&PWMD4, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
+        pwmEnableChannel(&PWMD4, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
         power_max = 0;
         chThdSleepMilliseconds(2000);
-        pwmEnableChannel(&PWMD3, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_min));
+        pwmEnableChannel(&PWMD3, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pwm_value_min));
 
 
       }// End if palReadLine && posti >0
@@ -191,12 +191,12 @@ static THD_FUNCTION(ThreadEntry,arg){
       /*
        * Barrier management is the same except for lighting management
        */
-      pwmEnableChannel(&PWMD3, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pw_value_zero));
-      pwmEnableChannel(&PWMD4, 0, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
+      pwmEnableChannel(&PWMD3, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD3, pw_value_zero));
+      pwmEnableChannel(&PWMD4, PWM_ZERO_CHANNEL , PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
 
       if(palReadLine(IR_ENTRY_LINE)==PAL_LOW && posti>0){
 
-        pwmEnableChannel(&PWMD4,0,PWM_PERCENTAGE_TO_WIDTH(&PWMD4,SERVO_NINETY_DEGREES));
+        pwmEnableChannel(&PWMD4, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD4,SERVO_NINETY_DEGREES));
 
         while(palReadLine(IR_ENTRY_LINE)==PAL_LOW){
           chThdSleepMilliseconds(200);
@@ -204,7 +204,7 @@ static THD_FUNCTION(ThreadEntry,arg){
 
         posti--;
         chThdSleepMilliseconds(2000);
-        pwmEnableChannel(&PWMD4, 0,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
+        pwmEnableChannel(&PWMD4, PWM_ZERO_CHANNEL ,PWM_PERCENTAGE_TO_WIDTH(&PWMD4, SERVO_ZERO_DEGREES));
       }//End If PalReadLIne && Posti >0
 
     }//End Else

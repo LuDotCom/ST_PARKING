@@ -32,6 +32,8 @@ static adcsample_t samples[ADC_GRP_NUM_CHANNELS*ADC_GRP_BUF_DEPTH];
 #define PWM_TIMER_FREQUENCY_SERVO   1000000
 #define PWM_PERIOD_SERVO            (PWM_TIMER_FREQUENCY_SERVO * 20 / 1000)
 
+#define PWM_ZERO_CHANNEL             0
+#define PWM_ONE_CHANNEL              1
 
 /*
  * Const Values
